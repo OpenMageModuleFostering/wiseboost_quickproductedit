@@ -1,0 +1,52 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Wiseboost
+ * @package    Wiseboost_TopBar
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<?php if(!Mage::getStoreConfigFlag('advanced/modules_disable_output/Wiseboost_TopBar')) { ?>
+<?php
+	$baseURL = Mage::app()->getStore(Mage::app()->getStore()->getId())->getBaseUrl(/*Mage_Core_Model_Store::URL_TYPE_LINK*/);
+	$cleanBaseURL = $baseURL;
+	$indexBaseURL = $baseURL;
+	
+	$sufix = "index.php/";
+	if (substr($baseURL, strlen($baseURL) - strlen($sufix)) == $sufix)
+	{
+		$cleanBaseURL = substr($baseURL, 0, strlen($baseURL) - strlen($sufix) - 1);
+	} 
+	else 
+	{
+		$indexBaseURL .= "index.php";
+	}
+	$path = substr(Mage::helper('core/url')->getCurrentUrl(), strlen($baseURL));
+
+	// store
+	$storeId = Mage::app()->getStore()->getId();
+?>
+<script type="text/javascript">
+	var wbtopbar_params = "function=check&path=<?php echo $path; ?>&store_id=<?php echo $storeId; ?>&cleanbaseurl=<?php echo urlencode($cleanBaseURL); ?>";
+	var wbtopbar_cleanbaseurl = "<?php echo $cleanBaseURL; ?>";
+	var wbtopbar_indexbaseurl = "<?php echo $indexBaseURL; ?>";
+	function wbtopbar_onLoad() {
+		wbtopbarInit(wbtopbar_indexbaseurl, wbtopbar_cleanbaseurl, wbtopbar_params);
+	}
+	if (window.addEventListener) { 
+		window.addEventListener( "load", wbtopbar_onLoad, false );
+	} else if ( window.attachEvent ) { 
+		window.attachEvent( "onload", wbtopbar_onLoad );
+	} else if (window.onLoad) {
+		window.onload = wbtopbar_onLoad;
+	}
+</script>
+<?php } ?>

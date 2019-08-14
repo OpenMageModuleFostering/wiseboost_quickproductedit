@@ -1,0 +1,96 @@
+.wiseboost_topbar_header
+{
+	background: #474747; 
+    border-bottom: 1px solid #373737;
+    color: #000;
+    height: 28px; 
+    left: 0;
+    opacity: 0.94;
+    position: relative;
+    width: 100%;
+    z-index: 2147483647;
+	overflow: hidden;
+	position: fixed; 
+	top: 0px; 
+	left: 0px;
+}
+
+/* IE */
+* html .wiseboost_topbar_header { 
+	position: absolute;
+}
+
+.wiseboost_topbar_header_inner 
+{
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2147483647;
+}
+
+.wiseboost_topbar_header_inner a, .wiseboost_topbar_header_inner span
+{
+	font-family: sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	font-style:	normal;
+	font-size-adjust: none;
+	color: #CCCCCC;
+	text-transform:	none;
+	text-decoration: none;
+	letter-spacing:	normal;
+	line-height: 28px;
+	text-align: left;
+	direction: ltr;
+}
+
+.wiseboost_topbar_horz_list_left a, .wiseboost_topbar_horz_list_left span
+{
+	display: block;
+	padding: 0 10px 0 10px;
+}
+.wiseboost_topbar_horz_list_left span, .wiseboost_topbar_horz_list_right span
+{
+	cursor: default;
+}
+
+.wiseboost_topbar_horz_list_right
+{
+	float: right;
+}
+.wiseboost_topbar_horz_list_right span
+{
+	padding: 0 10px 0 10px;
+}
+.wiseboost_topbar_horz_list_right li
+{
+	border-left: 2px solid #555555;
+}
+
+ul.wiseboost_topbar_horz_list
+{
+	margin:0;
+	padding-left:0;
+	white-space:nowrap;
+}
+.wiseboost_topbar_horz_list li
+{
+	display:inline;
+	list-style-type:none;
+	border-right: 2px solid #555555;
+	float: left;
+}
+.wiseboost_topbar_horz_list li a:hover
+{
+    background: linear-gradient(to top, #3A3A3A, #222222) repeat scroll 0 0 #222222;
+    color: #FAFAFA;
+}
+
+#wiseboost_topbar_logo a, #wiseboost_topbar_logo span
+{
+	padding: 0;
+}
+
+#wiseboost_topbar_admin a
+{
+	background: transparent;
+}
