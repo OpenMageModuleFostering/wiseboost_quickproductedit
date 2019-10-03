@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Wiseboost_QuickProductEdit",
+    "name": "OpenMageModuleFostering\/Wiseboost_QuickProductEdit",
     "type": "magento-module",
     "license": "OSL-3.0",
     "homepage": "",
     "description": "Adds a bar to the top of your store with a link to product page in the admin panel when you are logged in as admin.",
     "authors": [
-    {
-        "name": "Wiseboost",
-        "email": "raceface89@hotmail.com"
-    }
-],
+        {
+            "name": "Wiseboost",
+            "email": "raceface89@hotmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
