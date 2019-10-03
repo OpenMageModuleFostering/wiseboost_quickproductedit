@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 Adds a bar to the top of your store with a link to product page in the admin panel when you are logged in as admin.
